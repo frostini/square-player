@@ -2,6 +2,8 @@
   "name": "square-player-app",
   "private": true,
   "dependencies": {
+    "@primer/css": "^17.3.0",
+    "@primer/view-components": "^0.0.45",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",

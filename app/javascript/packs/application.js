@@ -7,6 +7,8 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "../style.scss";
+import "@primer/view-components"
 import "../components"
 
 Rails.start()

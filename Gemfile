@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 # Helps in creating a modular, modern UI - https://viewcomponent.org/
 gem "view_component", require: "view_component/engine"
+# Github swag for the view layer
+gem "primer_view_components"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
