@@ -22,6 +22,9 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+# For use in ActiveStorage
+gem 'aws-sdk-s3', '~> 1'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -38,6 +41,8 @@ group :development, :test do
 end
 
 group :development do
+  # A runtime developer console and IRB alternative with powerful introspection capabilities. | https://github.com/pry/pry
+  gem 'pry', '~> 0.13.1'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
