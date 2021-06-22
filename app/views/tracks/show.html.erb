@@ -1,0 +1,23 @@
+<div class="container-lg d-flex flex-column">
+<div class="border p-4 d-flex flex-column">
+  <%= form_with(model: @track, url: track_path(@track), method: "patch") do |form|  %>
+      <%= form.label :title, "Title" %>
+      <%= form.text_field :title %>
+      <%= form.label :artist, "Artist" %>
+      <%= form.text_field :artist %>
+      <%= form.label :position, "Order" %>
+      <%= form.number_field :position %>
+      <%= form.label :main_image %>
+      <%= form.file_field :main_image %>
+      <%= form.submit %>
+    <% end %>
+  </div>
+  <%if @track.main_image.attached?%>
+    <div class="border p-4 d-flex flex-column">
+      <audio controls controlsList= "nodownload">
+        <source src=<%=url_for(@track.main_image)%> type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+    </div>
+  <%end%>
+</div>

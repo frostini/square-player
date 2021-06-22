@@ -1,0 +1,10 @@
+<div class="container-lg d-flex flex-column">
+  <%@tracks.each do |track| %>
+    <div class="border p-4 d-flex flex-column">
+      <p><%=track.title%></p>
+      <%if track.main_image.attached?%>
+        <%= image_tag track.main_image %>
+      <%end%>
+    </div>
+  <%end%>
+</div>
