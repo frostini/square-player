@@ -10,7 +10,6 @@ class WelcomeController < ApplicationController
 
   def create
     @track = Track.new(person_params)
-    binding.pry
     if @track.save
       redirect_to root_path
     else

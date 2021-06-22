@@ -14,7 +14,7 @@
   </div>
   <div class="border p-4">
     <div class="border p-4 d-flex flex-column">
-      <%= audio_tag url_for(@audio.main_image), controls: true, html: {controlsList: "nodownload"} %>
+      <%= audio_tag url_for(@audio.main_image), controls: true%>
     </div>
     <%@tracks.each do |track| %>
       <div class="border p-4 d-flex flex-column">
