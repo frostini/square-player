@@ -14,7 +14,10 @@
   </div>
   <div class="border p-4">
     <div class="border p-4 d-flex flex-column">
-      <%= audio_tag url_for(@audio.main_image), controls: true%>
+      <audio controls controlsList= "nodownload">
+        <source src=<%=url_for(@audio.main_image)%> type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
     </div>
     <%@tracks.each do |track| %>
       <div class="border p-4 d-flex flex-column">
