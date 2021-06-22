@@ -13,15 +13,16 @@
     <% end %>
   </div>
   <div class="border p-4">
-
-      <%@tracks.each do |track| %>
-        <div class="border p-4 d-flex flex-column">
+    <div class="border p-4 d-flex flex-column">
+      <%= audio_tag url_for(@audio.main_image), controls: true, html: {controlsList: "nodownload"} %>
+    </div>
+    <%@tracks.each do |track| %>
+      <div class="border p-4 d-flex flex-column">
         <p><%=track.title%></p>
         <%if track.main_image.attached?%>
-        <%= image_tag track.main_image %>
+          <%= image_tag track.main_image %>
         <%end%>
-        </div>
-      <%end%>
-    </div>
+      </div>
+    <%end%>
   </div>
 </div>

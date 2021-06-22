@@ -5,15 +5,16 @@ class WelcomeController < ApplicationController
   def show
     @tracks = Track.all
     @track = Track.find_by(id: params[:id]) || Track.new
+    @audio = Track.last
   end
 
   def create
-    # binding.pry
     @track = Track.new(person_params)
+    binding.pry
     if @track.save
       redirect_to root_path
     else
-      redirect_to welcome_path
+      redirect_to welcome_path(track.id)
     end
   end
 
