@@ -12,6 +12,9 @@ module SquarePlayerApp
     config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.
+    config.autoload_paths << Rails.root.join('lib')
+    
+    config.hosts << "eecc31c4870f.ngrok.io"
     
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.

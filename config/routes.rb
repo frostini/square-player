@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :welcome, only: [:show, :create]
   resources :tracks, only: [:index, :show, :update, :create, :new]
   resource :player, only: [:show]
+  get '/auth/:provider/callback', to: 'sessions#create'
   # get "/" => "home#index", :as => "root"
 end
