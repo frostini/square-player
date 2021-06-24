@@ -1,15 +1,20 @@
 <div class="container-lg d-flex flex-column">
 <h1>New Track</h1>
   <%=form_with(model: @track, url: tracks_path) do |form| %>
-  
     <%= form.label :title, "Title" %>
     <%= form.text_field :title %>
+    <%= form.label :title, "Track Link" %>
+    <%= form.text_field :link %>
+    <%= form.label :title, "Link Text" %>
+    <%= form.text_field :link_title %>
     <%= form.label :artist, "Artist" %>
     <%= form.text_field :artist %>
     <%= form.label :position, "Order" %>
     <%= form.number_field :position %>
-    <%= form.label :main_image %>
-    <%= form.file_field :main_image %>
+    <%= form.label :cover_image %>
+    <%= form.file_field :cover_image %>
+    <%= form.label :full_audio %>
+    <%= form.file_field :full_audio %>
     <%= form.submit %>
   <% end %>
 </div>

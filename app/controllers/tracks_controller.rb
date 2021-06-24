@@ -1,5 +1,7 @@
 class TracksController < ApplicationController
   before_action :set_track, only: [:show, :update]
+  before_action :require_auth
+
   def index
     @tracks = Track.all
   end
@@ -34,7 +36,7 @@ class TracksController < ApplicationController
 
 private
   def track_params
-    params.require(:track).permit(:title, :position, :artist, :main_image)
+    params.require(:track).permit(:title, :position, :artist, :cover_image, :full_audio, :link, :link_title)
   end
 
   def set_track

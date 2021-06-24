@@ -5,7 +5,7 @@ module Square
   class SquareApiClient
     attr_writer :access_token
     CONNECT_BASE_URL =  'https://connect.squareup.com'
-    
+
     # GET /v2/sites
     def list_sites
       response = RestClient.get(build_path('/v2/sites'), get_headers)
@@ -32,7 +32,7 @@ module Square
       response = RestClient.delete(build_path("/v2/sites/#{site_id}/snippet"), get_headers)
     end
 
-    private 
+  private
 
     def build_path(path)
       "#{CONNECT_BASE_URL}#{path}"
@@ -41,8 +41,15 @@ module Square
     def get_headers
       {
         'Content-Type': 'application/json', 
-        'Authorization': "Bearer #{@access_token}"
+        'Authorization': "Bearer #{get_access_token}"
       }
+    end
+    def get_access_token
+      if Rails.env.development?
+        @access_token = Rails.application.credentials.dig(:square, :square_access_token)
+      else
+        @access_token
+      end
     end
   end
 end

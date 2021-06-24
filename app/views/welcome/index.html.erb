@@ -1,10 +1,4 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
-<%= render(HelloWorldComponent.new(title: "Hi hello wow")) %>
-<%= javascript_pack_tag 'logging'%>
-
+<div class="p-5">
 <div class="Layout">
   <div class="Layout-main border">
     <div class="Layout-main-centered-md">
@@ -29,54 +23,14 @@
   <div class="Layout-main border">
     <div class="Layout-main-centered-xl">
       <div class="container-xl border color-border-info">
-        centered xl
+      <%=link_to "Profile", tracks_path%>
       </div>
     </div>
   </div>
-  <div class="Layout-sidebar border">sidebar</div>
+  <div class="Layout-sidebar border">
+  <div class="Box">
+    <a class='button' href="/auth/square"> Connect </a>
+  </div>
+  </div>
 </div>
-<%= render(Primer::CounterComponent.new(count: 25)) %>
-<%= render(Primer::ButtonComponent.new(scheme: :primary)) { "Primary" } %>
-<%= render(Primer::AutoComplete.new(src: "/auto_complete", list_id: "fruits-popup-4", input_id: "fruits-input-4", position: :relative)) do |c| %>
-  <% c.label(classes:"").with_content("Fruits") %>
-  <% c.input(type: :text) %>
-  <% c.icon(icon: :search) %>
-<% end %>
-<div>
-  <%= render(Primer::DetailsComponent.new(overlay: :default, reset: true, position: :relative)) do |c| %>
-    <% c.summary do %>
-      Dropdown
-    <% end %>
-
-    <% c.body do %>
-      <%= render(Primer::DropdownMenuComponent.new(header: "Options")) do %>
-        <ul>
-          <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
-          <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
-          <li><a class="dropdown-item" href="#url">Dropdown item</a></li>
-        </ul>
-      <% end %>
-    <% end %>
-  <% end %>
-</div>
-
-<%= render(Primer::TabContainerComponent.new)  do %>
-  <div role="tablist">
-    <button type="button" role="tab" aria-selected="true">Tab one</button>
-    <button type="button" role="tab" tabindex="-1">Tab two</button>
-    <button type="button" role="tab" tabindex="-1">Tab three</button>
-  </div>
-  <div role="tabpanel">
-    Panel 1
-  </div>
-  <div role="tabpanel" hidden>
-    Panel 2
-  </div>
-  <div role="tabpanel" hidden>
-    Panel 3
-  </div>
-<% end %>
-
-<div class=Box>
-  <a class='button' href="/auth/square"> Connect </a>
 </div>

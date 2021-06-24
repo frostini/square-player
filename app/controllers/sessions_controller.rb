@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     redirect_to tracks_path
   end
 
-  protected
+protected
 
   def auth_hash
     request.env['omniauth.auth']

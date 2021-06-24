@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   def require_auth
-    redirect_to root_path unless session[:auth]
+    redirect_to root_path unless session[:auth] || Rails.env.development?
   end
 
   def square_client

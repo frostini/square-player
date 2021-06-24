@@ -3,21 +3,32 @@
   <%= form_with(model: @track, url: track_path(@track), method: "patch") do |form|  %>
       <%= form.label :title, "Title" %>
       <%= form.text_field :title %>
+      <%= form.label :title, "Track Link" %>
+      <%= form.text_field :link %>
+      <%= form.label :title, "Link Text" %>
+      <%= form.text_field :link_title %>
       <%= form.label :artist, "Artist" %>
       <%= form.text_field :artist %>
       <%= form.label :position, "Order" %>
       <%= form.number_field :position %>
-      <%= form.label :main_image %>
-      <%= form.file_field :main_image %>
+      <%= form.label :cover_image %>
+      <%= form.file_field :cover_image %>
+      <%= form.label :full_audio %>
+      <%= form.file_field :full_audio %>
       <%= form.submit %>
     <% end %>
   </div>
-  <%if @track.main_image.attached?%>
+  <%if @track.full_audio.attached?%>
     <div class="border p-4 d-flex flex-column">
-      <audio controls controlsList= "nodownload">
-        <source src=<%=url_for(@track.main_image)%> type="audio/mpeg">
+      <audio preload="metadata" controls controlsList= "nodownload">
+        <source src=<%=url_for(@track.full_audio)%> type="audio/mpeg">
       Your browser does not support the audio element.
       </audio>
+    </div>
+  <%end%>
+  <%if @track.cover_image.attached?%>
+    <div class="border p-4 d-flex flex-column">
+      <%= image_tag(url_for(@track.cover_image), width: "100px")%> 
     </div>
   <%end%>
 </div>

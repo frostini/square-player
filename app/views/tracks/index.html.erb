@@ -2,8 +2,8 @@
   <%@tracks.each do |track| %>
     <div class="border p-4 d-flex flex-column">
       <p><%=track.title%></p>
-      <%if track.main_image.attached?%>
-        <%= image_tag track.main_image %>
+      <%if track.cover_image.attached?%>
+        <%= image_tag track.cover_image %>
       <%end%>
     </div>
   <%end%>

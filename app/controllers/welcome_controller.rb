@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  before_action :require_auth, except: [:index]
+  
   def index
   end
 
