@@ -1,4 +1,27 @@
-<h1>hello world</h1>
+<%= render(Primer::SubheadComponent.new(spacious: true, p: 4)) do |component| %>
+  <% component.heading(tag: :h3) do %>
+    Sample Music
+  <% end %>
+  <% component.description do %>
+    Here are your tunes
+  <% end %>
+<% end %>
+<%if @track.full_audio.attached?%>
+  <%=render 'inject' %>
+<%end%>
+
+<% if @snippet %> 
+  <div class='Box'>
+    <%= button_to "Remove Custom Cursor", player_path(@snippet.site_id), :class => 'remove-cursor', :method => :delete %>
+  </div>
+<% else %>
+  <div class='Box'>
+  <%= link_to "Add Player", player_path(@sites.last.id),
+  method: :create %>
+  </div>
+
+  <% end %>
+
 <!--
 # https://flaviocopes.com/html-audio-tag/
 # https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics

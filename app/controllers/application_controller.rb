@@ -5,7 +5,18 @@ class ApplicationController < ActionController::Base
 
   def square_client
     square_api_client = Square::SquareApiClient.new
-    square_api_client.access_token = session[:auth]['credentials']['token']
+    square_api_client.access_token = 
+    Rails.env.development? ? 
+    Rails.application.credentials.dig(:square, :square_access_token)    
+    :
+    session[:auth]['credentials']['token']
+
+    # if Rails.env.development?
+    #   @access_token = Rails.application.credentials.dig(:square, :square_access_token)
+    # else
+    #   @access_token
+    # end
+
 
     return square_api_client
   end

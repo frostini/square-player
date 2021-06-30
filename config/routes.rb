@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
   resources :welcome, only: [:show, :create]
   resources :tracks, only: [:index, :show, :update, :create, :new]
-  resource :player, only: [:show]
+  resource :player, only: [:show, :create, :destroy]
   get '/auth/:provider/callback', to: 'sessions#create'
   # get "/" => "home#index", :as => "root"
 end
