@@ -1,40 +1,42 @@
-------------------------
--add snippet API to player page
-  -post to add
-  -delete to remove
-    -add a simple console.log function to ensure that is working
-  -add audio script for a 
--add most barebones MVP version of player
--define API and tasks needed to rock it
--lets do it
+------------------todo
+-CREATE FULL VERSION OF PLAYER
 
-------------------------
-add remove song to track show page
--remove song
-  -are you sure alert
+create player
+  -load all songs/multiple songs
+  -load song names/artist, image, URL, click to link, link title
+  -view song list
 
-tracks (2)
-index page 
--create proper table/header of song elements
--link to show element
+---------------------
+
+-add remove song to track show page
+  -remove song
+    -are you sure alert
+
+-tracks (index page )
+  -create proper table/header of song elements
+  -link to show element
 
 
-Add Player Model (3)
+(IF NEEDED) Add Player Model (3)
 ID, is_active, on_site_id, provider_id, content
 
-methods
+-methods
   update content
-
-tracks, string(,)
-content
-host_site
-is_active
+  tracks, string(,)
+  content
+  host_site
+  is_active
 
 PROFILE
 snippet on page (SQUARE)
 (view/player_page link stand alone)
 (view/player_page link iframe (footer))
 
+
+--------todo end
+
+
+OTHER NOTES
 
 create
 add to site
@@ -48,8 +50,7 @@ player
   pull in site data
   and display
 
-create player
-  load song names/artist, image, URL, click to link, link title
+
 
 
 API MODELS
@@ -102,6 +103,15 @@ remove all home page and set up route based navigation
     shoe
   players - yes
     show
+
+------------------------
+-add snippet API to player page
+  -post to add
+  -delete to remove
+    -add a simple console.log function to ensure that is working
+  -add audio script for a 
+-add most barebones MVP version of player
+
 
 ------------------------
 

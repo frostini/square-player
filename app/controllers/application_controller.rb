@@ -11,13 +11,6 @@ class ApplicationController < ActionController::Base
     :
     session[:auth]['credentials']['token']
 
-    # if Rails.env.development?
-    #   @access_token = Rails.application.credentials.dig(:square, :square_access_token)
-    # else
-    #   @access_token
-    # end
-
-
     return square_api_client
   end
 end
