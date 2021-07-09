@@ -9,6 +9,9 @@
 <%if @track.full_audio.attached?%>
   <%=render 'inject' %>
 <%end%>
+<%= render(AudioPlayer::AudioPlayerComponent.new(track: @track)) do %>
+  <h1>Hello, World!</h1>
+<% end %>
 
 <% if @snippet %> 
   <div class='Box'>
@@ -28,4 +31,11 @@
 # https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
 # https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
 # https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+https://letsbuildui.dev/articles/building-an-audio-player-with-react-hooks
+
+https://www.geeksforgeeks.org/create-a-music-player-using-javascript/
+https://ide.geeksforgeeks.org/tryit.php/T3gdWUn4aX
+http://talkerscode.com/webtricks/create-custom-audio-player-using-html5-and-javascript.php
+
+
 -->

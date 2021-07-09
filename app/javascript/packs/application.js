@@ -10,6 +10,7 @@ import "channels"
 import "../style.scss";
 import "@primer/view-components"
 import "../components"
+import "../controllers"
 
 Rails.start()
 Turbolinks.start()

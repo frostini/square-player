@@ -1,10 +1,10 @@
-class HelloWorld extends HTMLElement {
+class AudioPlayerComponent extends HTMLElement {
   styles() {
     return `
       :host {
         display: block;
       }
-      .testing { background-color: blue; height: auto; width: 100%; }
+      .testing { background-color: red; height: 100px; width: 100%; }
     `
   }
 
@@ -17,9 +17,8 @@ class HelloWorld extends HTMLElement {
       </style>
       <div class="testing">
         <slot name="title"></slot>
-        <slot name="content"></slot>
       </div>
     `
   }
 }
-customElements.define('hello-world', HelloWorld)
+customElements.define('audio-player', AudioPlayerComponent)

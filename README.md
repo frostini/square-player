@@ -2,7 +2,66 @@
 -CREATE FULL VERSION OF PLAYER
 
 create player
-  -load all songs/multiple songs
+
+ - create audio component as a viewcomponent
+ - add stimulus example and test if working
+  - console log for play click handler
+DONE
+
+ - create html / css for player, with individual elements
+html
+  sticky footer
+    player left
+      cover image
+        transform size-square
+        transform circle
+        animate rotate
+      bottom play/pause circle button
+      details circle button
+    title / time center
+      track title
+      artist detail
+      playing time - 
+
+    buy now right
+
+controller
+ - initialize player Audio element and load source
+ 
+ component
+ - load data
+ - conditional render
+ 
+ 
+ controller
+ - attach play/pause handler to button
+ - update track method
+    path param (back, navigation)
+      example for list onClick
+    default = 0 unless next in index
+      end of track, play next, or start
+
+
+
+ - create controlled drawer component with toggle button
+ - add play/pause control element to form
+    look into icons for primer framework if needed.
+
+*create abstracted view component
+chers
+
+
+
+ - load all songs/multiple songs
+ 
+ - add list element for tracks in drawer
+  - include play link handler
+  - include add to cart/link
+
+-design player embed and page
+  -components
+  -functions/actions
+
   -load song names/artist, image, URL, click to link, link title
   -view song list
 
@@ -32,6 +91,10 @@ snippet on page (SQUARE)
 (view/player_page link stand alone)
 (view/player_page link iframe (footer))
 
+--------
+-add drag/drop ordering and serializing
+for player tracks
+  -logic added in player page
 
 --------todo end
 
