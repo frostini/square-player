@@ -1,0 +1,59 @@
+.c-audio-player{
+  background: red;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+}
+.c-audio-player__controls{
+  width: 20%;
+  height: auto;
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.c-audio-player__display{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 60%;
+  height: auto;
+  background: yellow;
+}
+.c-audio-player__cta{
+  width: 20%;
+  height: auto;
+  background: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.c-audio-player__visuals{
+  display: block;
+  margin: -20px auto 0;
+}
+.c-audio-player__visuals-frame{
+  width: 60px;
+  height: 60px;
+  background: pink;
+
+}
+.c-audio-player__buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.h-spin{
+  -webkit-animation:spin 5s linear infinite;
+  -moz-animation:spin 5s linear infinite;
+  animation:spin 5s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

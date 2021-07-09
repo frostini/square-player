@@ -29,9 +29,8 @@ controller
  - initialize player Audio element and load source
  
  component
- - load data
- - conditional render
- 
+ - load data (list)
+ - conditional render, single song
  
  controller
  - attach play/pause handler to button
@@ -233,3 +232,12 @@ destroy
 
 
 https://pragmaticstudio.com/tutorials/using-active-storage-in-rails
+
+
+<audio-player 
+  data-controller="audio-player--audio-player">
+<audio onplay="playing()"  slot="title" preload="metadata" controls controlsList= "nodownload">
+<source src=<%=url_for(@track.full_audio)%> type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</audio-player>

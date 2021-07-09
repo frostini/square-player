@@ -1,7 +1,24 @@
-<audio-player 
-  data-controller="audio-player--audio-player">
-<audio onplay="playing()"  slot="title" preload="metadata" controls controlsList= "nodownload">
-<source src=<%=url_for(@track.full_audio)%> type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-</audio-player>
+<div class="c-audio-player">
+  <div class="c-audio-player__controls">
+    <div class="c-audio-player__visuals">
+      <div class="c-audio-player__visuals-frame h-spin">
+        <img src='' />
+      </div>
+    </div>
+    <div class="c-audio-player__buttons">
+      <button>details</button>
+      <button>play</button>
+    </div>
+  </div>
+  <div class="c-audio-player__display">
+    <h3>Title Track</h3>
+    <h5>by Artist McFartist</h5>
+    <%= render(Primer::ProgressBarComponent.new(size: :small)) do |component| %>
+      <% component.item(bg: :info_inverse, percentage: 50) %>
+    <% end %>
+  </div>
+  <div class="c-audio-player__cta">
+    <button>buy now</button>
+  </div>
+</div>
+
