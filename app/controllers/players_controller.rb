@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  before_action :require_auth
+  before_action :require_auth, except: [:iframe]
 
   def show
     @tracks = Track.all
