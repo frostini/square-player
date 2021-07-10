@@ -1,21 +1,32 @@
-<div class="c-audio-player">
-  <div class="c-audio-player__controls">
+<div class="c-audio-player" data-controller="audio-player--audio-player" 
+data-audio-player--audio-player-isPlaying-value="false"
+data-audio-player--audio-player-index-value="0"
+data-audio-player--audio-player-tracks-value="<%=@tracks %>"
+>
+  <div class="c-audio-player__controls"
+  data-audio-player--audio-player
+  
+  >
     <div class="c-audio-player__visuals">
       <div class="c-audio-player__visuals-frame h-spin">
-        <img src='' />
+        <%= image_tag(url_for(@track.cover_image), width: "60px", height: "60px")%> 
       </div>
     </div>
     <div class="c-audio-player__buttons">
-      <button>details</button>
-      <button>play</button>
+      <button 
+       data-audio-player--audio-player-target="menu"
+       data-action="click->audio-player--audio-player#menu"
+       >details</button>
+      <button 
+       data-audio-player--audio-player-target="play"
+       data-action="click->audio-player--audio-player#playPauseTrack"
+      >play</button>
     </div>
   </div>
-  <div class="c-audio-player__display">
-    <h3>Title Track</h3>
-    <h5>by Artist McFartist</h5>
-    <%= render(Primer::ProgressBarComponent.new(size: :small)) do |component| %>
-      <% component.item(bg: :info_inverse, percentage: 50) %>
-    <% end %>
+  <div class="c-audio-player__display"
+  >
+    <h3 data-audio-player--audio-player-target="title"></h3>
+    <h5 data-audio-player--audio-player-target="artist"></h5>
   </div>
   <div class="c-audio-player__cta">
     <button>buy now</button>

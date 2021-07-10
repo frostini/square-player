@@ -2,7 +2,7 @@ class PlayersController < ApplicationController
   before_action :require_auth
 
   def show
-    @track = Track.last
+    @tracks = Track.all
     @sites = square_client.list_sites
     Rails.logger.debug(@sites)
     # binding.pry

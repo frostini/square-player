@@ -1,12 +1,52 @@
-------------------todo
--CREATE FULL VERSION OF PLAYER
+DONE
+update in html
+ - title
+ - artist
 
-create player
+controller
+- create base for controller
+
+- load data types in controller file
+  - title
+  - artist
+
+add click handlers in controller to play/pause button
+add click handlers in controller to menu button
+add click handlers in controller to buy now button and implement
+- initialize player Audio element and load source file in controller
+- implement play/pause logic
+- implement click handler for details menu logic
+  - load data (list)
+  - add duration bar styling
+  - add duration logic
+ - update track method
+    path param (back, navigation)
+      example for list onClick
+    default = 0 unless next in index
+      end of track, play next, or start
+- add functionality to play/buy links in list
+- clean up components (unmounting, refactor, complete behavioral affinity)
+- final styling of component for mobile
+  - add icons to buttons (primer )
+  - style button size/color
+        cover image
+        transform size-square
+        transform circle
+        animate rotate
+      bottom play/pause circle button
+      details circle button
+
+GO TO DESIGN THE ENTIRE EXPERIENCE FOR FINAL IMPLEMENTATION
+
+
+
+------------------todo
+
+DONE
 
  - create audio component as a viewcomponent
  - add stimulus example and test if working
   - console log for play click handler
-DONE
 
  - create html / css for player, with individual elements
 html
@@ -25,26 +65,11 @@ html
 
     buy now right
 
-controller
- - initialize player Audio element and load source
- 
- component
- - load data (list)
- - conditional render, single song
- 
- controller
- - attach play/pause handler to button
- - update track method
-    path param (back, navigation)
-      example for list onClick
-    default = 0 unless next in index
-      end of track, play next, or start
+
+------------------todo
 
 
 
- - create controlled drawer component with toggle button
- - add play/pause control element to form
-    look into icons for primer framework if needed.
 
 *create abstracted view component
 chers
@@ -234,10 +259,46 @@ destroy
 https://pragmaticstudio.com/tutorials/using-active-storage-in-rails
 
 
-<audio-player 
-  data-controller="audio-player--audio-player">
-<audio onplay="playing()"  slot="title" preload="metadata" controls controlsList= "nodownload">
-<source src=<%=url_for(@track.full_audio)%> type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-</audio-player>
+CAPTURED
+optimize image on uplodad for size/display of cover
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", ready);
+function ready() {
+  console.log('ready')
+  document.querySelector("#id-checkbox").addEventListener("click",
+    function(event) {
+      console.log('clickity')
+      event.preventDefault();
+      window.location.href = '/product/digital-album/1'
+    }
+  , false);
+}
+</script>
+<div 
+style='
+  position: fixed  ;
+  z-index: 100;
+  width: 100vw;
+  height: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+'
+  >
+  <div
+  style="display:flex;flex-direction:column;"
+  >
+  
+  <a id="id-checkbox" href="">testing here</a>
+  <audio controls>
+  
+    <source src=<%=@tracks.last.full_audio.url%> type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  </div>
+</div>
