@@ -1,6 +1,5 @@
 class PlayersController < ApplicationController
   before_action :require_auth
-  after_action :allow_iframe, only: :iframe
 
   def show
     @tracks = Track.all
@@ -28,13 +27,10 @@ class PlayersController < ApplicationController
 
 private
   def content
-    render_to_string(action: "iframe", :layout => false)
-    # render_to_string(partial: 'players/inject')
+    # render_to_string(action: "iframe", :layout => false)
+    render_to_string(partial: 'players/inject')
   end
 
-  def allow_iframe
-    response.headers.except! 'X-Frame-Options'
-  end
   # def create_params
   #   params.require(:snippet).permit(:text)
   # end

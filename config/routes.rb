@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :tracks, only: [:index, :show, :update, :create, :new]
   resource :player, only: [:show, :create, :destroy]
   get '/auth/:provider/callback', to: 'sessions#create'
+  get '/square-player/:id', to: 'players#iframe', as: "iframe"
   # get "/" => "home#index", :as => "root"
 end

@@ -7,8 +7,8 @@
   <% end %>
 <% end %>
 
+<%= render(AudioPlayer::AudioPlayerComponent.new(tracks: @tracks))%>
 
-<%= render 'inject'%>
 
 <% if @snippet %> 
   <div class='Box'>

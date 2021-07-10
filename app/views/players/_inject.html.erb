@@ -1,1 +1,13 @@
-<%= render(AudioPlayer::AudioPlayerComponent.new(tracks: @tracks))%>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", ready);
+  function ready() {
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("src", "https://morning-hamlet-04857.herokuapp.com/square-player/1");
+    ifrm.style.position = "fixed";
+    ifrm.style.zIndex = 100;
+    ifrm.style.bottom = 0;
+    ifrm.style.width = "100%";
+    ifrm.style.height = "480px";
+    document.body.appendChild(ifrm);
+  }
+</script>
