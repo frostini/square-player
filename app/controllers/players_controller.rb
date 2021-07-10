@@ -1,5 +1,6 @@
 class PlayersController < ApplicationController
   before_action :require_auth
+  after_action :allow_iframe, only: :iframe
 
   def show
     @tracks = Track.all
@@ -9,9 +10,14 @@ class PlayersController < ApplicationController
     @snippet = square_client.get_snippet(@sites.last.id)
   end
 
+  def iframe
+    @tracks = Track.all
+  end
+
   def create
     @tracks = Track.all
-    square_client.upsert_snippet(params[:format], render_to_string(partial: 'players/inject'))
+    square_client.upsert_snippet(params[:format], content)
+    
     redirect_to player_path
   end
 
@@ -21,6 +27,14 @@ class PlayersController < ApplicationController
   end
 
 private
+  def content
+    render_to_string(action: "iframe", :layout => false)
+    # render_to_string(partial: 'players/inject')
+  end
+
+  def allow_iframe
+    response.headers.except! 'X-Frame-Options'
+  end
   # def create_params
   #   params.require(:snippet).permit(:text)
   # end

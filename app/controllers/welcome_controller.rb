@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   before_action :require_auth, except: [:index]
+  after_action :allow_iframe, only: :iframe
   
   def index
   end
@@ -10,4 +11,7 @@ class WelcomeController < ApplicationController
     @audio = Track.last
   end
 
+  def allow_iframe
+    response.headers.except! 'X-Frame-Options'
+  end
 end
