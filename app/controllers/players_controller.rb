@@ -10,7 +10,7 @@ class PlayersController < ApplicationController
   end
 
   def create
-    @track = Track.last
+    @tracks = Track.all
     square_client.upsert_snippet(params[:format], render_to_string(partial: 'players/inject'))
     redirect_to player_path
   end
