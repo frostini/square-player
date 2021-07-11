@@ -14,5 +14,8 @@
     ifrm.style.overflow = "visible";
     document.body.appendChild(ifrm);
   }
-
+  window.addEventListener("message", (event) => {
+    console.log(event)
+  }, false);
+  
 </script>
