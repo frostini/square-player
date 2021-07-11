@@ -20,7 +20,7 @@ export default class extends Controller {
 // let track_index = 0;
 // let isPlaying = false;
 // let updateTimer;
-  static targets = [ "menu", "title", "artist", "play" ]
+  static targets = [ "menu", "title", "artist", "play", "link" ]
   static values = { 
     tracks: Array,
     index: Number,
@@ -46,10 +46,17 @@ export default class extends Controller {
   loadTrack(track) {
     const { title, artist, fileUrl, link, linkTitle } = track
     
+    this.linkTarget.innerHTML = linkTitle
+    this.linkTarget.href = link
     this.titleTarget.innerHTML = title;
     this.artistTarget.innerHTML = artist;
     this.audioObj.src = fileUrl;
     this.audioObj.load();
+  }
+  visitTarget(event) {
+    debugger
+    event.preventDefault();
+    window.location.href = '/product/digital-album/1'
   }
   playPauseTrack() {
     this.isPlaying ? this.pauseTrack() : this.playTrack();

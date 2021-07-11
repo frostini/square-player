@@ -12,9 +12,15 @@ controller
 
 add click handlers in controller to play/pause button
 add click handlers in controller to menu button
-add click handlers in controller to buy now button and implement
-- initialize player Audio element and load source file in controller
 - implement play/pause logic
+
+- initialize player Audio element and load source file in controller
+
+DONE
+
+add click handlers in controller to buy now button and implement
+
+- implement play/pause logic for icon details
 - implement click handler for details menu logic
   - load data (list)
   - add duration bar styling

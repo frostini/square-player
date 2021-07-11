@@ -36,7 +36,7 @@
 }
 .c-audio-player__visuals{
   display: block;
-  margin: -20px auto 0;
+  margin: 0 auto;
 }
 .c-audio-player__visuals-frame{
   width: 60px;
