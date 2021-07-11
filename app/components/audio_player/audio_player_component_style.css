@@ -25,6 +25,13 @@
   height: auto;
   background: yellow;
 }
+.c-audio-player__display h3{
+  font-family: 'Quantico', sans-serif;
+}
+.c-audio-player__display h5{
+  font-family: 'Open Sans', sans-serif;
+}
+
 .c-audio-player__cta{
   width: 20%;
   height: auto;

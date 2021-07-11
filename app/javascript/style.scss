@@ -1,2 +1,28 @@
 @import '@primer/css';
 @import '../components/audio_player/audio_player_component_style.css';
+
+// APPLICATION LAYOUT NAVBAR
+div.Header#Header__custom {
+ background-color: white !important;
+}
+.Header__title{
+  color: black;
+  font-family: 'Quantico', sans-serif;
+  font-weight: 700;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+// HERO COMPONENT IN WELCOME PAGE
+.Hero-Component {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+div.Hero-Component__Title {
+  font-size: '84px';
+}
+.h-branded-font{
+  font-family: 'Quantico', sans-serif !important;
+}

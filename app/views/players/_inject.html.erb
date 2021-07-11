@@ -1,7 +1,7 @@
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", ready);
   function ready() {
-    var ifrm = document.createElement("iframe");
+    let ifrm = document.createElement("iframe");
     ifrm.setAttribute("src", "https://morning-hamlet-04857.herokuapp.com/square-player/1");
     ifrm.style.position = "fixed";
     ifrm.style.zIndex = 100;
@@ -14,8 +14,4 @@
     ifrm.style.overflow = "visible";
     document.body.appendChild(ifrm);
   }
-  window.addEventListener("message", (event) => {
-    console.log(event)
-  }, false);
-  
 </script>

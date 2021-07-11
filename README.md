@@ -15,36 +15,77 @@ add click handlers in controller to menu button
 - implement play/pause logic
 
 - initialize player Audio element and load source file in controller
+- add click handlers in controller to buy now button and implement
+- make player link for embed dynamic in _inject script
 
-DONE
+DONE--
+add quantico font to website
+add open sans font to website
 
-add click handlers in controller to buy now button and implement
+add navbar
+add logo to navbar
+add authenticated navigation component as route controller
+add title text component
+add subtitle component text
+add sign up with square custom button 
+add supporting text below button
+
 
 - implement play/pause logic for icon details
+  - prep play svg in illustrator
+    - save file in app
+    - include file in element
+    - style round button
+  - prep pause svg in illustrator
+    - save file in app
+    - add conditional element to swap with play on toggle (look into view component usage for this)
+
+  - style image cover 
+    add handler to animate rotate on play
+    transform image into circle
+    add circle in center to spin
+  - style player text (title/artist)
+  - style buy button
+- test basic styling in the embedded square website example
+----------
+ADD LINK SQUARE PLAYER PAGE
+  /player (link)
+Add title
+add subtext (specify copy as well)
+add embedded example of player
+add list/table of square sites
+  -add title
+  -add site url to open target 
+  -add toggle form and button
+  -add conditional for button to lock when chosen and remove text to be revealed
+
+ADD TRACKS PAGE
+  /tracks (customize)
+
+GO TO DESIGN THE ENTIRE EXPERIENCE FOR FINAL IMPLEMENTATION
+
+
+- dynamically load the ID of the player for the embed script
 - implement click handler for details menu logic
   - load data (list)
-  - add duration bar styling
-  - add duration logic
- - update track method
+  - update track method
     path param (back, navigation)
       example for list onClick
     default = 0 unless next in index
       end of track, play next, or start
 - add functionality to play/buy links in list
+
+  - add duration bar logic and element
+  - add duration bar styling
+  
+
+
 - clean up components (unmounting, refactor, complete behavioral affinity)
 - final styling of component for mobile
-  - add icons to buttons (primer )
-  - style button size/color
-        cover image
-        transform size-square
-        transform circle
-        animate rotate
-      bottom play/pause circle button
-      details circle button
-
-GO TO DESIGN THE ENTIRE EXPERIENCE FOR FINAL IMPLEMENTATION
 
 
+
+- add iframe loading indicator
 
 ------------------todo
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-color-mode="light" data-light-theme="light">
+<html>
   <head>
     <title>SquarePlayerApp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,14 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quantico:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="Header" id="Header__custom" >
-      <div class="Header-item Header-item--full">
-        <a href="#" class="Header-link f4 d-flex flex-items-center">
-          <%= image_tag( "square_player_logo.png", size: '40x40')%>
-          <span class="Header__title">square player</span>
-        </a>
-      </div>
-    </div>
     <%= yield %>
   </body>
 </html>
