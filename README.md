@@ -1,18 +1,3 @@
-
-            <%=link_to('Delete', {controller: :tracks, id: track.id, action: :destroy}, alert: "Are you sure you want to delete this?", method: :delete)%>
-
-            
-// Complete Track Index Page
-//image
-// text
-// artist
-//action container
-  // view/edit
-  // delete
-
-// Implement
-  // delete route for track
-
 // Implement 
 - update user/player/track final model behavior
   user
@@ -31,13 +16,28 @@
 - write project description
 - record demo, upload to youtube
 
-
+- add fall back image for player if there is none
 
 
 
 
 
 DONE
+
+// Complete Track Index Page
+//image
+// text
+// artist
+//action container
+  // view/edit
+  // delete
+
+// Implement
+  // delete route for track
+
+
+
+
 update in html
  - title
  - artist

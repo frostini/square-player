@@ -1,20 +1,10 @@
-<div class="container-lg d-flex flex-column">
-<h1>New Track</h1>
-  <%=form_with(model: @track, url: tracks_path) do |form| %>
-    <%= form.label :title, "Title" %>
-    <%= form.text_field :title %>
-    <%= form.label :title, "Track Link" %>
-    <%= form.text_field :link %>
-    <%= form.label :title, "Link Text" %>
-    <%= form.text_field :link_title %>
-    <%= form.label :artist, "Artist" %>
-    <%= form.text_field :artist %>
-    <%= form.label :position, "Order" %>
-    <%= form.number_field :position %>
-    <%= form.label :cover_image %>
-    <%= form.file_field :cover_image %>
-    <%= form.label :full_audio %>
-    <%= form.file_field :full_audio %>
-    <%= form.submit %>
-  <% end %>
+<div class="container-lg d-flex flex-column flex-justify-start">
+  <div class="mt-3 mb-1">
+    <h1 class="h3-mktg h-branded-font mb-2">New Track</h1>
+    <p class="f3-mktg">
+      Click on the toggle option to select the kind of player you would like to add to your site.
+    </p>
+    <hr width="100px"> 
+  </div>
+  <%=render "form", method: "post", url: tracks_path %>
 </div>

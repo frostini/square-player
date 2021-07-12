@@ -1,0 +1,44 @@
+<%= form_with(model: @track, url: url, method: method) do |form|  %>
+  <div class="d-flex flex-column form-group">
+    <h6 class="h6-mktg h-branded-font mb-5">Track Details</h6>  
+    <div class="form-group-header">
+      <%= form.label :title, "Track Title" %>
+    </div>
+    <div class="form-group-body mb-3">
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
+    <div class="form-group-header">
+      <%= form.label :title, "Track Link" %>
+    </div>
+    <div class="form-group-body mb-3">
+      <%= form.text_field :link, class: "form-control"%>
+    </div>
+    <div class="form-group-header">  
+      <%= form.label :title, "Link Text" %>
+    </div>
+    <div class="form-group-body mb-3">
+      <%= form.text_field :link_title, class: "form-control"%>
+    </div>
+      <div class="form-group-header">
+        <%= form.label :artist, "Artist" %>
+      </div>
+      <div class="form-group-body mb-3">
+      <%= form.text_field :artist, class: "form-control"%>
+    </div>
+      <div class="form-group-header">
+        <%= form.label :cover_image, "Update Track Cover Image" %>
+      </div>
+      <div class="form-group-body mb-3">
+      <%= form.file_field :cover_image %>
+      </div>
+      <div class="form-group-header">
+        <%= form.label :full_audio, "Update Track Audio" %>
+      </div>
+      <div class="form-group-body mb-3">
+      <%= form.file_field :full_audio %>
+      </div>
+      <div class="pt-4 pb-5">
+        <%= form.submit "Update", class: "btn-mktg btn-enterprise-mktg mr-3" %>
+      </div>
+  </div>
+<% end %>
