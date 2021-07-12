@@ -1,10 +1,21 @@
-<div class="container-lg d-flex flex-column">
-  <%@tracks.each do |track| %>
-    <div class="border p-4 d-flex flex-column">
-      <p><%=track.title%></p>
-      <%if track.cover_image.attached?%>
-        <%= image_tag track.cover_image %>
+<div class="Hero-Header">
+  <div class="mt-3 mb-1">
+    <h1 class="h3-mktg h-branded-font mb-2">Link Square Player</h1>
+    <p class="f3-mktg">
+      Click on the toggle option to select the kind of player you would like to add to your site.
+    </p>
+    <hr width="100px"> 
+  </div>
+  <div class="h-Content-Container mt-5">
+    <div class="container-lg d-flex flex-column">
+      <%@tracks.each do |track| %>
+        <div class="border p-4 d-flex flex-column">
+          <p><%=track.title%></p>
+          <%if track.cover_image.attached?%>
+            <%= image_tag track.cover_image %>
+          <%end%>
+        </div>
       <%end%>
     </div>
-  <%end%>
+  </div>
 </div>

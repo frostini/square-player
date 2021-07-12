@@ -13,7 +13,6 @@ class PlayersController < ApplicationController
     # @snippet = square_client.get_snippet(@sites.last.id)
     # @snippet = square_client.get_snippet(x.id)
     # binding.pry
-    # Rails.logger.debug(@sites)
   end
 
   def iframe

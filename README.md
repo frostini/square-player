@@ -1,3 +1,34 @@
+// Complete Track Index Page
+//image
+// text
+// artist
+//action container
+  // view/edit
+  // delete
+
+// Implement
+  // delete route for track
+
+// Implement 
+- update user/player/track final model behavior
+  user
+    player
+      tracks
+- dynamically load the ID of the player for the embed script
+- update toggle function for different players
+
+- update the oauth redirect link to hit the /player route
+- tweek detailing/styling for for elements
+
+- squareplayer.qr8.io domain
+
+
+
+
+
+
+
+
 DONE
 update in html
  - title
@@ -46,7 +77,7 @@ add authenticated navigation component as route controller
   GO TO DESIGN THE ENTIRE EXPERIENCE FOR FINAL IMPLEMENTATION
 DONE--
   -add title
-  
+
 
 add list/table of square sites
 
