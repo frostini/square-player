@@ -1,6 +1,15 @@
 @import '@primer/css';
 @import '../components/audio_player/audio_player_component_style.css';
 
+// Complete Track Index Page
+//image
+// text
+// artist
+//action container
+  // view/edit
+  // delete
+
+
 
 // APPLICATION LAYOUT NAVBAR
 div.Header#Header__custom {
@@ -81,6 +90,9 @@ div.Hero-Component__Title {
   -webkit-animation:spin 5s linear infinite;
   -moz-animation:spin 5s linear infinite;
   animation:spin 5s linear infinite;
+}
+.h-w-max-800{
+  max-width: 800px;
 }
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); -moz-transform-origin: center center;} }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); -webkit-transform-origin: center center;} }

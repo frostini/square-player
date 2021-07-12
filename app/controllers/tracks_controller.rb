@@ -21,6 +21,11 @@ class TracksController < ApplicationController
       redirect_to welcome_path(track.id)
     end
   end
+
+  def destroy
+    Track.destroy(params[:id])
+    redirect_to tracks_path
+  end
   
   def update
     respond_to do |format|

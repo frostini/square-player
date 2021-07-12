@@ -1,3 +1,7 @@
+
+            <%=link_to('Delete', {controller: :tracks, id: track.id, action: :destroy}, alert: "Are you sure you want to delete this?", method: :delete)%>
+
+            
 // Complete Track Index Page
 //image
 // text
@@ -22,6 +26,10 @@
 
 - squareplayer.qr8.io domain
 
+- seed test data/images/songs
+- add favicon
+- write project description
+- record demo, upload to youtube
 
 
 

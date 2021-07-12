@@ -8,14 +8,23 @@
   </div>
   <div class="h-Content-Container mt-5">
     <div class="container-lg d-flex flex-column">
-      <%@tracks.each do |track| %>
-        <div class="border p-4 d-flex flex-column">
-          <p><%=track.title%></p>
-          <%if track.cover_image.attached?%>
-            <%= image_tag track.cover_image %>
-          <%end%>
+      <% @tracks.each do |track| %>
+        <div class="h-w-max-800 border p-4 d-flex flex-row flex-justify-between">
+          <div class="d-flex flex-row flex-justify-start flex-items-center">
+            <%if track.cover_image.attached? %> 
+              <%= image_tag track.cover_image, width:'60px', height:'60px'  %>
+            <% end %>
+              <div class="pl-5">
+                <h4 class="h4-mktg h-branded-font"><%=track.title%></h4>
+                <p class="f3-mktg"><%=track.artist%></p>
+              </div>
+          </div>
+          <div class="">
+            <%=link_to "View / Edit", track_path(track.id) %>
+            <%=link_to 'Delete', track_path(track.id), method: :delete, data: { confirm: "Are you sure you want to remove this track from your player's library?" }, class: "pl-5"  %>
+          </div>
         </div>
-      <%end%>
+      <% end %>
     </div>
   </div>
 </div>
