@@ -1,31 +1,13 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-// Targets
-// let now_playing 
-// let track_art 
-// let track_name 
-// let track_artist 
- 
-// let playpause_btn 
-// let next_btn 
-// let prev_btn 
- 
-// let seek_slider 
-// let volume_slider 
-// let curr_time 
-// let total_duration 
- 
-// Values
-// let track_index = 0;
-// let isPlaying = false;
-// let updateTimer;
   static targets = [ "menu", "title", "artist", "play", "link", "image" ]
   static values = { 
     tracks: Array,
     index: Number,
     isPlaying: Boolean,
   }
+
   initialize() {
     this.audioObj = new Audio();
     const firstTrack = JSON.parse(this.tracksValue[this.tracksValue.length - 1])
@@ -34,6 +16,7 @@ export default class extends Controller {
   connect() {
     console.log(`Hello, Stimulus! ${this.indexValue} ${this.isPlayingValue}`) 
   }
+
   menu() {
     console.log('open menu')
   }
@@ -53,10 +36,6 @@ export default class extends Controller {
     this.audioObj.src = fileUrl;
     this.audioObj.load();
   }
-  // visitTarget(event) {
-  //   event.preventDefault();
-  //   window.location.href = '/product/digital-album/1'
-  // }
   playPauseTrack() {
     this.isPlaying ? this.pauseTrack() : this.playTrack();
   }
