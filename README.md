@@ -28,10 +28,7 @@ add supporting text below button "Free for Square Sites"
 add authenticated navigation component as route controller
   /player (link)
   /tracks (customize)
-
-DONE--
 - test basic styling in the embedded square website example
-
   - implement play/pause logic for icon details
     - prep play svg in illustrator
       - save file in app
@@ -46,28 +43,31 @@ DONE--
     add circle in center to spin
   - style player text (title/artist)
   - style buy button
+  GO TO DESIGN THE ENTIRE EXPERIENCE FOR FINAL IMPLEMENTATION
+DONE--
 
-- finish player show view to manage player details
-- 
 
-----------
-
-Add title
-add subtext (specify copy as well)
-add embedded example of player
 add list/table of square sites
   -add title
   -add site url to open target 
   -add toggle form and button
   -add conditional for button to lock when chosen and remove text to be revealed
 
-ADD TRACKS PAGE
+- finish player show view to manage player details
+- 
 
+----------
 
-GO TO DESIGN THE ENTIRE EXPERIENCE FOR FINAL IMPLEMENTATION
+ADD TRACKS FINAL VERSION OF PAGE
+  Add title
+  add subtext (specify copy as well)
+
 
 
 - dynamically load the ID of the player for the embed script
+
+----------
+
 - implement click handler for details menu logic
   - load data (list)
   - update track method
