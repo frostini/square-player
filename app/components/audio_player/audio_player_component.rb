@@ -4,6 +4,7 @@ class AudioPlayer::AudioPlayerComponent < ViewComponent::Base
        y = x.serializable_hash
               .deep_transform_keys! { |key| key.camelize(:lower) }
        y["fileUrl"] = x.full_audio.url
+       y["imageUrl"] = x.cover_image.url
        y.to_json
     end
     

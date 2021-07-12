@@ -14,15 +14,73 @@ div.Header#Header__custom {
 }
 
 // HERO COMPONENT IN WELCOME PAGE
+.Hero-Header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
 .Hero-Component {
   display: flex;
   width: 100%;
   height: 100%;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 div.Hero-Component__Title {
   font-size: '84px';
 }
+
+.btn-mktg.btn-enterprise-mktg {
+  font-family: 'Quantico', sans-serif !important;
+}
+.Hero-Component__cta-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  text-align: center;
+}
+.Hero-Component__cta-container p span{
+  display:block;
+  padding-top: 5px;
+  font-weight: 500;
+}
+.h-Content-Container{
+  margin-right: 5%;
+  width: 90%;
+}
+.h-border-radius{
+  border-radius: 25px;
+}
+.h-w-100{
+  width: 100%;
+  max-width: 800px;
+}
+.h-fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0
+}
+
 .h-branded-font{
   font-family: 'Quantico', sans-serif !important;
 }
+.h-hidden{
+  display: none;
+}
+.h-round{
+  border-radius: 50%;
+}
+.h-spin{
+  -webkit-animation:spin 5s linear infinite;
+  -moz-animation:spin 5s linear infinite;
+  animation:spin 5s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); -moz-transform-origin: center center;} }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); -webkit-transform-origin: center center;} }
+@keyframes spin { 100% { transform:rotate(360deg);transform-origin: center center; } }

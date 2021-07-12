@@ -20,7 +20,7 @@ export default class extends Controller {
 // let track_index = 0;
 // let isPlaying = false;
 // let updateTimer;
-  static targets = [ "menu", "title", "artist", "play", "link" ]
+  static targets = [ "menu", "title", "artist", "play", "link", "image" ]
   static values = { 
     tracks: Array,
     index: Number,
@@ -44,8 +44,8 @@ export default class extends Controller {
 
   }
   loadTrack(track) {
-    const { title, artist, fileUrl, link, linkTitle } = track
-    
+    const { title, artist, fileUrl, link, linkTitle, imageUrl } = track
+    this.imageTarget.src = imageUrl
     this.linkTarget.innerHTML = linkTitle
     this.linkTarget.href = link
     this.titleTarget.innerHTML = title;
@@ -53,20 +53,25 @@ export default class extends Controller {
     this.audioObj.src = fileUrl;
     this.audioObj.load();
   }
-  visitTarget(event) {
-    debugger
-    event.preventDefault();
-    window.location.href = '/product/digital-album/1'
-  }
+  // visitTarget(event) {
+  //   event.preventDefault();
+  //   window.location.href = '/product/digital-album/1'
+  // }
   playPauseTrack() {
     this.isPlaying ? this.pauseTrack() : this.playTrack();
   }
   playTrack() {
+    this.playTarget.firstElementChild.classList.add('h-hidden')
+    this.playTarget.lastElementChild.classList.remove('h-hidden')
+    this.imageTarget.classList.add('h-spin')
     this.audioObj.play();
     this.isPlaying = true
     this.logEvent('clicked to play track')
   }
   pauseTrack() {
+    this.playTarget.firstElementChild.classList.remove('h-hidden')
+    this.playTarget.lastElementChild.classList.add('h-hidden')
+    this.imageTarget.classList.remove('h-spin')
     this.audioObj.pause();
     this.isPlaying = false
     this.logEvent('clicked to pause track')

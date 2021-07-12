@@ -12,14 +12,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quantico:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="Header" id="Header__custom" >
-      <div class="Header-item Header-item--full">
-        <a href="#" class="Header-link f4 d-flex flex-items-center">
-          <%= image_tag( "square_player_logo.png", size: '40x40')%>
-          <span class="Header__title">square player</span>
-        </a>
+    <div class="Layout">
+      <div class="Layout-main">
+        <%= yield %>
+      </div>  
+      <div class="Layout-sidebar">
+        <div class="Header" id="Header__custom" >
+          <div class="Header-item">
+            <a href="#" class="Header-link f4 d-flex flex-items-center">
+              <%= image_tag( "square_player_logo.png", size: '40x40')%>
+              <span class="Header__title">square player</span>
+            </a>
+          </div>
+        </div>
+        <aside class="bg-gray-light p-3" style="max-width: 360px">
+          <h5 class="text-gray mb-2 pb-1 border-bottom h-branded-font">Menu</h5>
+          <nav class="SideNav">
+            <%= link_to "Link", player_path, class: 'SideNav-subItem h-branded-font'%>
+            <%= link_to "Customize", tracks_path, class: 'SideNav-subItem h-branded-font'%>
+          </nav>
+        </aside>
       </div>
     </div>
-    <%= yield %>
   </body>
 </html>

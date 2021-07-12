@@ -12,7 +12,7 @@ class PlayersController < ApplicationController
   def iframe
     @tracks = Track.all
 
-    render "players/iframe", :layout => "layouts/slim"
+    render partial: "players/iframe", layout: "layouts/slim"
   end
 
   def create

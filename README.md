@@ -17,39 +17,41 @@ add click handlers in controller to menu button
 - initialize player Audio element and load source file in controller
 - add click handlers in controller to buy now button and implement
 - make player link for embed dynamic in _inject script
-
-DONE--
 add quantico font to website
 add open sans font to website
-
 add navbar
 add logo to navbar
-add authenticated navigation component as route controller
 add title text component
 add subtitle component text
 add sign up with square custom button 
-add supporting text below button
+add supporting text below button "Free for Square Sites"
+add authenticated navigation component as route controller
+  /player (link)
+  /tracks (customize)
 
+DONE--
+- test basic styling in the embedded square website example
 
-- implement play/pause logic for icon details
-  - prep play svg in illustrator
-    - save file in app
-    - include file in element
-    - style round button
-  - prep pause svg in illustrator
-    - save file in app
-    - add conditional element to swap with play on toggle (look into view component usage for this)
-
+  - implement play/pause logic for icon details
+    - prep play svg in illustrator
+      - save file in app
+      - include file in element
+      - style round button
+    - prep pause svg in illustrator
+      - save file in app
+      - add conditional element to swap with play on toggle (look into view component usage for this)
   - style image cover 
     add handler to animate rotate on play
     transform image into circle
     add circle in center to spin
   - style player text (title/artist)
   - style buy button
-- test basic styling in the embedded square website example
+
+- finish player show view to manage player details
+- 
+
 ----------
-ADD LINK SQUARE PLAYER PAGE
-  /player (link)
+
 Add title
 add subtext (specify copy as well)
 add embedded example of player
@@ -60,7 +62,7 @@ add list/table of square sites
   -add conditional for button to lock when chosen and remove text to be revealed
 
 ADD TRACKS PAGE
-  /tracks (customize)
+
 
 GO TO DESIGN THE ENTIRE EXPERIENCE FOR FINAL IMPLEMENTATION
 
@@ -349,3 +351,40 @@ style='
   </audio>
   </div>
 </div>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", ready);
+function ready() {
+  console.log('ready')
+  document.querySelector("#id-checkbox").addEventListener("click",
+    function(event) {
+      console.log('clickity')
+      event.preventDefault();
+      window.location.href = '/product/digital-album/1'
+    }
+  , false);
+}
+</script>
+
+
+
+
+<!--
+
+# https://flaviocopes.com/html-audio-tag/
+# https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics
+# https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
+# https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+# https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+https://letsbuildui.dev/articles/building-an-audio-player-with-react-hooks
+
+https://www.geeksforgeeks.org/create-a-music-player-using-javascript/
+https://ide.geeksforgeeks.org/tryit.php/T3gdWUn4aX
+http://talkerscode.com/webtricks/create-custom-audio-player-using-html5-and-javascript.php
+
+
+-->
+
