@@ -3,10 +3,17 @@ class PlayersController < ApplicationController
 
   def show
     @tracks = Track.all
-    @sites = square_client.list_sites
-    Rails.logger.debug(@sites)
+    user_sites = square_client.list_sites
+    if user_sites
+      @sites = user_sites.map do |site| 
+        snippet = square_client.get_snippet(site.id)
+        { site: site, snippet: snippet}
+      end
+    end
+    # @snippet = square_client.get_snippet(@sites.last.id)
+    # @snippet = square_client.get_snippet(x.id)
     # binding.pry
-    @snippet = square_client.get_snippet(@sites.last.id)
+    # Rails.logger.debug(@sites)
   end
 
   def iframe

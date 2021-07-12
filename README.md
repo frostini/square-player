@@ -45,10 +45,11 @@ add authenticated navigation component as route controller
   - style buy button
   GO TO DESIGN THE ENTIRE EXPERIENCE FOR FINAL IMPLEMENTATION
 DONE--
-
+  -add title
+  
 
 add list/table of square sites
-  -add title
+
   -add site url to open target 
   -add toggle form and button
   -add conditional for button to lock when chosen and remove text to be revealed
@@ -67,7 +68,7 @@ ADD TRACKS FINAL VERSION OF PAGE
 - dynamically load the ID of the player for the embed script
 
 ----------
-
+- update player when changes surface
 - implement click handler for details menu logic
   - load data (list)
   - update track method
@@ -80,14 +81,10 @@ ADD TRACKS FINAL VERSION OF PAGE
   - add duration bar logic and element
   - add duration bar styling
   
-
-
 - clean up components (unmounting, refactor, complete behavioral affinity)
 - final styling of component for mobile
-
-
-
 - add iframe loading indicator
+
 
 ------------------todo
 
