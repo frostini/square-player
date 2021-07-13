@@ -14,6 +14,7 @@ class TracksController < ApplicationController
   end
 
   def create
+    session[:user].player.new_track
     @track = Track.new(track_params)
     if @track.save
       redirect_to @track
