@@ -10,12 +10,13 @@ class ApplicationController < ActionController::Base
 
   def square_client
     square_api_client = Square::SquareApiClient.new
+      #   # THIS IS A PATCH UNTIL I FIGURE SOMETHING ELSE OUT TO MOCK TOKEN/OAUTH IN DEVELOPMENT ENVIRONMENT
     square_api_client.access_token = 
     Rails.env.development? ? 
     Rails.application.credentials.dig(:square, :square_access_token)    
     :
     session[:auth]['credentials']['token']
-
+    # ^^^^^^^^^
     return square_api_client
   end
 
@@ -31,6 +32,4 @@ class ApplicationController < ActionController::Base
     end
     session[:user] = @user
   end
-
-
 end

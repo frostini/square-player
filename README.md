@@ -1,40 +1,23 @@
 // Implement 
+- add new track button to tracks index
 
+- update base copy to make it as sensical as possible
+- inspect content to make notes/recommendations
+  - home page
 
-
-
-
-
-
--update player controller
-  -update loading your personal player
-  -update to show sample dummy player
-
-  dynamically load the ID of the player for the embed script
-
-
-
--update welcome controller
+- update welcome controller
   update to user 1 player
-
-
-
-
-
-
-
-- dynamically load the ID of the player for the embed script
+- update toggle form function for different players
 
 - seed test data/images/songs
-- update toggle form function for different players
+
 - add squareplayer.qr8.io domain
-- update the oauth redirect link to hit the /player route
 - tweek detailing/styling for for elements
 
 HARD BREAK AT 3 TO MAKE PRESENTATION MATERIALS.
 
 
-
+- add proper read me
 - add favicon
 - write project description
 - record demo, upload to youtube
@@ -46,6 +29,17 @@ HARD BREAK AT 3 TO MAKE PRESENTATION MATERIALS.
 
 
 DONE
+- update the oauth redirect link to hit the /player route
+-update player controller
+  -update loading your personal player
+  -update to show sample dummy player
+
+  dynamically load the ID of the player for the embed script
+
+- dynamically load the ID of the player for the embed script
+
+
+
 -update track controller
   update new/create
   update show

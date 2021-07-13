@@ -12,26 +12,11 @@ class PlayersController < ApplicationController
         { site: site, snippet: snippet}
       end
     end
-    # Site.find_by(site_id: ).user.tracks
-    # User.find_by(site_id: 
-    # my_conference.topics.find_or_create_by(name: "Name"))
-    # User.joins(:sites).where('sites.site_id' => [1, 2, 3])
-
-
-
-    Rails.logger.debug(session[:auth])
-    # binding.pry
-    # Rails.logger.debug(session[:auth])
-    # @snippet = square_client.get_snippet(@sites.last.id)
-    # @snippet = square_client.get_snippet(x.id)
-    # binding.pry
   end
 
   def iframe
-    # binding.pry
     @tracks = Player.find(params[:id]).tracks
 
-    # render partial: "players/iframe", layout: "slim"
     render inline: '<%= render "players/iframe" %>', layout: 'layouts/slim'
   end
 
@@ -51,9 +36,4 @@ private
   def content(id)
     render_to_string(partial: 'players/inject', locals: {player_id: id})
   end
-
-  # def create_params
-  #   params.require(:snippet).permit(:text)
-  # end
-
 end

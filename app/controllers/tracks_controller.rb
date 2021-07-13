@@ -14,8 +14,6 @@ class TracksController < ApplicationController
   end
 
   def create
-    # session[:user].player.new_track
-    # binding.pry
     @player = Player.find_by(user_id: session[:user]["id"])
     @track = Track.new(track_params.merge({player_id: @player.id}))
     if @track.save
