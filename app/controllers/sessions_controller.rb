@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
 
   def create
     session[:auth] = auth_hash
-    Rails.logger.debug(auth_hash)
+
+    Rails.logger.debug(session[:auth])
     redirect_to player_path
   end
 

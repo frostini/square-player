@@ -10,6 +10,10 @@ class PlayersController < ApplicationController
         { site: site, snippet: snippet}
       end
     end
+    
+    Rails.logger.debug(session[:auth])
+    # binding.pry
+    # Rails.logger.debug(session[:auth])
     # @snippet = square_client.get_snippet(@sites.last.id)
     # @snippet = square_client.get_snippet(x.id)
     # binding.pry

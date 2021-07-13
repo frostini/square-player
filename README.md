@@ -3,15 +3,24 @@
   user
     player
       tracks
-- dynamically load the ID of the player for the embed script
-- update toggle function for different players
 
+test to see what we get for oauth
+create user model
+
+
+
+- dynamically load the ID of the player for the embed script
+
+- seed test data/images/songs
+- update toggle form function for different players
+- add squareplayer.qr8.io domain
 - update the oauth redirect link to hit the /player route
 - tweek detailing/styling for for elements
 
-- squareplayer.qr8.io domain
+HARD BREAK AT 3 TO MAKE PRESENTATION MATERIALS.
 
-- seed test data/images/songs
+
+
 - add favicon
 - write project description
 - record demo, upload to youtube
