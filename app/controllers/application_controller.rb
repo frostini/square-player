@@ -1,6 +1,11 @@
 class ApplicationController < ActionController::Base
   def require_auth
-    redirect_to root_path unless session[:auth] || Rails.env.development?
+    # redirect_to root_path unless session[:auth] || Rails.env.development?
+    if Rails.env.development?
+      mock_session_for_dev unless session[:user]
+    else
+      redirect_to root_path unless session[:auth]
+    end
   end
 
   def square_client
@@ -13,4 +18,19 @@ class ApplicationController < ActionController::Base
 
     return square_api_client
   end
+
+  def mock_session_for_dev
+    sites = square_client.list_sites
+      
+    @local_sites = sites.map { |site| Site.find_or_create_by(site_id: site[:id], domain: site[:domain]) }
+    @user = @local_sites.first.user
+    unless @user
+      @user = User.create
+      player = @user.create_player
+      @local_sites.each { |site| site.update(user_id: @user.id) }
+    end
+    session[:user] = @user
+  end
+
+
 end

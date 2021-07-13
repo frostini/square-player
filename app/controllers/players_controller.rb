@@ -10,7 +10,13 @@ class PlayersController < ApplicationController
         { site: site, snippet: snippet}
       end
     end
-    
+    # Site.find_by(site_id: ).user.tracks
+    # User.find_by(site_id: 
+    # my_conference.topics.find_or_create_by(name: "Name"))
+    # User.joins(:sites).where('sites.site_id' => [1, 2, 3])
+
+
+
     Rails.logger.debug(session[:auth])
     # binding.pry
     # Rails.logger.debug(session[:auth])
