@@ -8,10 +8,18 @@
   </div>
   <div class="h-Content-Container mt-5">
     <h5 class="h6-mktg">
-      Example player for testing
+      Preview Your Custom Player
     </h5>
     <div class="h-border-radius color-shadow-large mt-5">
       <%= render(AudioPlayer::AudioPlayerComponent.new(tracks: @tracks))%>
+    </div>
+  </div>
+  <div class="h-Content-Container mt-5">
+    <h5 class="h6-mktg">
+      Sample Player For Testing
+    </h5>
+    <div class="h-border-radius color-shadow-large mt-5">
+      <%= render(AudioPlayer::AudioPlayerComponent.new(tracks: @custom_tracks))%>
     </div>
   </div>
   <div class="h-Content-Container mt-5">

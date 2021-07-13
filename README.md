@@ -1,15 +1,18 @@
 // Implement 
 
 
--update track controller
-  update new/create
-  update show
-  update index
+
+
+
+
 
 -update player controller
-  update loading your personal player
-  update to show sample dummy player
+  -update loading your personal player
+  -update to show sample dummy player
+
   dynamically load the ID of the player for the embed script
+
+
 
 -update welcome controller
   update to user 1 player
@@ -43,6 +46,12 @@ HARD BREAK AT 3 TO MAKE PRESENTATION MATERIALS.
 
 
 DONE
+-update track controller
+  update new/create
+  update show
+  update index
+
+
 
 - update user/player/track final model behavior
   user

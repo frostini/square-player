@@ -3,7 +3,7 @@ class TracksController < ApplicationController
   before_action :require_auth
 
   def index
-    @tracks = Track.all
+    @tracks = Player.find_by(user_id: session[:user]["id"]).tracks
   end
 
   def show
@@ -14,8 +14,10 @@ class TracksController < ApplicationController
   end
 
   def create
-    session[:user].player.new_track
-    @track = Track.new(track_params)
+    # session[:user].player.new_track
+    # binding.pry
+    @player = Player.find_by(user_id: session[:user]["id"])
+    @track = Track.new(track_params.merge({player_id: @player.id}))
     if @track.save
       redirect_to @track
     else

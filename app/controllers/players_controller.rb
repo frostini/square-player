@@ -2,7 +2,9 @@ class PlayersController < ApplicationController
   before_action :require_auth, except: [:iframe]
 
   def show
-    @tracks = Track.all
+    @tracks = Player.first.tracks
+    @custom_tracks = Player.find_by(user_id: session[:user]["id"]).tracks
+
     user_sites = square_client.list_sites
     if user_sites
       @sites = user_sites.map do |site| 
@@ -26,15 +28,16 @@ class PlayersController < ApplicationController
   end
 
   def iframe
-    @tracks = Track.all
+    # binding.pry
+    @tracks = Player.find(params[:id]).tracks
 
     # render partial: "players/iframe", layout: "slim"
     render inline: '<%= render "players/iframe" %>', layout: 'layouts/slim'
   end
 
   def create
-    @tracks = Track.all
-    square_client.upsert_snippet(params[:format], content)
+    player = Player.find_by(user_id: session[:user]["id"])
+    square_client.upsert_snippet(params[:format], content(player.id))
     
     redirect_to player_path
   end
@@ -45,9 +48,8 @@ class PlayersController < ApplicationController
   end
 
 private
-  def content
-    # render_to_string(action: "iframe", :layout => false)
-    render_to_string(partial: 'players/inject')
+  def content(id)
+    render_to_string(partial: 'players/inject', locals: {player_id: id})
   end
 
   # def create_params

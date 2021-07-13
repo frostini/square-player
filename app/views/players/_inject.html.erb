@@ -2,7 +2,7 @@
   document.addEventListener("DOMContentLoaded", ready);
   function ready() {
     let ifrm = document.createElement("iframe");
-    ifrm.setAttribute("src", "https://morning-hamlet-04857.herokuapp.com/square-player/1");
+    ifrm.setAttribute("src", "https://morning-hamlet-04857.herokuapp.com/square-player/<%=player_id%>");
     ifrm.style.position = "fixed";
     ifrm.style.zIndex = 100;
     ifrm.style.bottom = '15px';
