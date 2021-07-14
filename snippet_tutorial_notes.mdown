@@ -1,0 +1,65 @@
+
+GEMS
+
+# Square Omniauth
+gem 'omniauth-square', github: "nickrobinson/omniauth-square"
+
+# RestClient
+gem 'rest-client'
+
+
+APPLICATION CONTROLLER
+add require auth method
+add square client config method
+
+SESSIONS CONTROLLER
+create session
+auth hash
+
+ROUTES
+get "/", to: "welcome#index", as: 'welcome'
+get '/auth/:provider/callback', to: 'sessions#create'
+resources :sites, only: [:index, :show] do 
+  resources :snippets, only: [:create, :destroy]
+end
+
+
+OMNIAUTH INITIALIZER
+config/omniauth
+
+VIEWS
+sites/show
+welcome/index
+
+LIB/SQUARE_API_CLIENT
+**actual square client and they added the rest client
+
+APP CONFIG
+config/application.rb
+
+config.autoload_paths << Rails.root.join('lib')
+
+
+SITES CONTROLLER
+create index 
+create show
+authenticate with require auth
+
+SNIPPETS CONTROLLER
+create
+destroy
+
+
+# https://flaviocopes.com/html-audio-tag/
+# https://developer.mozilla.org/en-US/docs/Web/Guide/Audio_and_video_delivery/Cross-browser_audio_basics
+# https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement
+# https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+# https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+https://letsbuildui.dev/articles/building-an-audio-player-with-react-hooks
+
+https://www.geeksforgeeks.org/create-a-music-player-using-javascript/
+https://ide.geeksforgeeks.org/tryit.php/T3gdWUn4aX
+http://talkerscode.com/webtricks/create-custom-audio-player-using-html5-and-javascript.php
+
+https://www.geeksforgeeks.org/create-a-music-player-using-javascript/
+

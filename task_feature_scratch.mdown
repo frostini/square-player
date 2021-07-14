@@ -1,0 +1,56 @@
+// Implement 
+- add new track button to tracks index
+
+- update base copy to make it as sensical as possible
+- inspect content to make notes/recommendations
+  - home page
+
+- update welcome controller
+  update to user 1 player
+- seed test data/images/songs
+
+
+
+HARD BREAK AT 3 TO MAKE PRESENTATION MATERIALS.
+
+
+- add proper read me
+- add favicon
+- add fall back image for player if there is none
+- update toggle form function for different players
+  -add conditional for button to lock when chosen and remove text to be revealed
+- tweek detailing/styling for for elements
+- add squareplayer.qr8.io domain
+
+----------
+- update player when changes surface
+- implement click handler for details menu logic
+  - load data (list)
+  - update track method
+    path param (back, navigation)
+      example for list onClick
+    default = 0 unless next in index
+      end of track, play next, or start
+- add functionality to play/buy links in list
+- add duration bar logic and element
+- add duration bar styling
+  
+- clean up components (unmounting, refactor, complete behavioral affinity)
+- final styling of component for mobile
+- add iframe loading indicator
+
+  - custom alert screen for remove track
+  - flash messages for core functions/events
+
+snippet on page (SQUARE)
+(view/player_page link stand alone)
+(view/player_page link iframe (footer))
+
+--------
+-add drag/drop ordering and serializing
+for player tracks
+
+
+CAPTURED
+optimize image on uplodad for size/display of cover
+
