@@ -1,0 +1,6 @@
+<div class="d-flex flex-row flex-justify-start flex-items-center">
+  <div class="pr-5">
+    <a target="_blank" href="https://<%=site[:site].domain%>"  class="f3-mktg"><%=site[:site].domain%></a>
+  </div>
+  <%= button_to "Remove Player from Site", player_path(site[:snippet].site_id), :class => 'remove-cursor', :method => :delete, class: "btn-mktg btn-enterprise-mktg btn-sm-mktg" %>
+</div>

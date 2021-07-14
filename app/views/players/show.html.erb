@@ -29,33 +29,11 @@
   </div>
   <div class="mt-5">
     <% @sites.each do |site| %>
-      <div>
-        <a target="_blank" href="https://<%=site[:site].domain%>"  class="f3-mktg"><%=site[:site].domain%></a>
-      </div>
-      <div>
-        <form>
-          <div class="form-checkbox">
-            <label>
-              <input type="radio" name="hireme" checked />
-              Add Sample Player
-            </label>
-          </div>
-          <div class="form-checkbox">
-            <label aria-live="polite">
-              <input type="radio" class="form-checkbox-details-trigger" name="hireme" />
-              Add Custom Player
-            </label>
-          </div>
-        </form>
-      </div>
-      <div>
-      <% if site[:snippet] %> 
-          <%= button_to "Remove Player from Site", player_path(site[:snippet].site_id), :class => 'remove-cursor', :method => :delete, class: "btn-mktg btn-enterprise-mktg btn-sm-mktg" %>
-      <% else %>
-        <%= link_to "Add Player", player_path(site[:site].id),
-        method: :create, class: "btn-mktg btn-enterprise-mktg btn-sm-mktg" %>
-      <% end %>
-      </div>
+        <% if site[:snippet] %> 
+          <%=render "remove_player_form", site: site, custom_player_id:  @custom_tracks.first.player_id, sample_player_id: @tracks.first.player_id %>
+        <% else %>
+          <%=render "new_player_form", site: site, custom_player_id:  @custom_tracks.first.player_id, sample_player_id: @tracks.first.player_id %>
+        <% end %>
     <% end %>
   </div>
 </div>

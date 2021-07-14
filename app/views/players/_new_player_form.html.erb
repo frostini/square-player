@@ -1,0 +1,18 @@
+<div>
+  <a target="_blank" href="https://<%=site[:site].domain%>"  class="f3-mktg"><%=site[:site].domain%></a>
+</div>
+<%= form_with(url: player_path(site[:site].id), method: :create) do |form|  %> 
+  <div class="pt-5 d-flex flex-row flex-justify-start flex-items-center">
+    <div class="ml-5">
+      <%= form.radio_button :player, sample_player_id, checked: true %>
+      <%= form.label :sample, "Sample Player" %>
+    </div>
+    <div class="ml-5">
+      <%= form.radio_button :player, custom_player_id %>
+      <%= form.label :custom, "Custom Player" %>
+    </div>
+    <div class="ml-5">
+      <%= form.submit "Update", class: "btn-mktg btn-enterprise-mktg mr-3" %>
+    </div>
+  </div>
+<% end %>

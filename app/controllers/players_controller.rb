@@ -16,14 +16,11 @@ class PlayersController < ApplicationController
 
   def iframe
     @tracks = Player.find(params[:id]).tracks
-
     render inline: '<%= render "players/iframe" %>', layout: 'layouts/slim'
   end
 
   def create
-    player = Player.find_by(user_id: session[:user]["id"])
-    square_client.upsert_snippet(params[:format], content(player.id))
-    
+    square_client.upsert_snippet(params[:format], content(params[:player]))
     redirect_to player_path
   end
 
